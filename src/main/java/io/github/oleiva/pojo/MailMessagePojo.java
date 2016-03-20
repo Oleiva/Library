@@ -1,6 +1,6 @@
-package io.github.oleiva.objects;
+package io.github.oleiva.pojo;
 
-public class MailMessage {
+public class MailMessagePojo {
 
     private String message;
     private String subject;

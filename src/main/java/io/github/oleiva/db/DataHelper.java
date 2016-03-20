@@ -21,7 +21,7 @@ import org.hibernate.transform.Transformers;
 import io.github.oleiva.beans.Pager;
 import io.github.oleiva.entity.ext.AuthorExt;
 import io.github.oleiva.entity.ext.GenreExt;
-import io.github.oleiva.entity.HibernateUtil;
+//import io.github.oleiva.entity.HibernateUtil;
 import io.github.oleiva.entity.ext.PublisherExt;
 import io.github.oleiva.entity.Vote;
 
@@ -39,8 +39,9 @@ public class DataHelper {
 
         prepareCriterias();
 
-        sessionFactory = HibernateUtil.getSessionFactory();
-
+//        sessionFactory = HibernateUtil.getSessionFactory();
+//
+        sessionFactory.getCurrentSession();
         bookProjection = Projections.projectionList();
         bookProjection.add(Projections.property("id"), "id");
         bookProjection.add(Projections.property("name"), "name");
