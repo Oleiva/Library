@@ -17,16 +17,16 @@ import javax.faces.model.SelectItem;
 
 import io.github.oleiva.beans.Pager;
 import io.github.oleiva.comparators.ListComparator;
-import io.github.oleiva.db.DataHelper;
-import io.github.oleiva.entity.ext.PublisherExt;
+import io.github.oleiva.configs.DataHelper;
+import io.github.oleiva.entity.Publisher;
 
 @ManagedBean
 @SessionScoped
 public class PublisherController implements Serializable, Converter {
 
     private List<SelectItem> selectItems = new ArrayList<SelectItem>();
-    private Map<Long, PublisherExt> map;
-    private List<PublisherExt> list;
+    private Map<Long, Publisher> map;
+    private List<Publisher> list;
     private Pager pager;
     private DataHelper dataHelper;
     @ManagedProperty(value = "#{bookListController}")
@@ -37,14 +37,14 @@ public class PublisherController implements Serializable, Converter {
         pager = bookListController.getPager();
         dataHelper = bookListController.getDataHelper();
 
-        map = new HashMap<Long, PublisherExt>();
+        map = new HashMap<Long, Publisher>();
         list = dataHelper.getAllPublishers();
 
         Collections.sort(list, ListComparator.getInstance());
         
         list.add(0,createEmptyPublisher());
 
-        for (PublisherExt publisher : list) {
+        for (Publisher publisher : list) {
             map.put(publisher.getId(), publisher);
             selectItems.add(new SelectItem(publisher, publisher.getName()));
         }
@@ -55,7 +55,7 @@ public class PublisherController implements Serializable, Converter {
         return selectItems;
     }
 
-    public List<PublisherExt> getPublisherList() {
+    public List<Publisher> getPublisherList() {
         return list;
     }
 
@@ -66,7 +66,7 @@ public class PublisherController implements Serializable, Converter {
 
     @Override
     public String getAsString(FacesContext context, UIComponent component, Object value) {
-        return ((PublisherExt) value).getId().toString();
+        return ((Publisher) value).getId().toString();
     }
 
     public BookListController getBookListController() {
@@ -77,8 +77,8 @@ public class PublisherController implements Serializable, Converter {
         this.bookListController = bookListController;
     }
     
-     private PublisherExt createEmptyPublisher() {
-        PublisherExt publisher = new PublisherExt();
+     private Publisher createEmptyPublisher() {
+        Publisher publisher = new Publisher();
         publisher.setId(-1L);
         publisher.setName("");
         return publisher;

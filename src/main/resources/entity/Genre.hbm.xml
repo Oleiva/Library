@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Jul 5, 2013 2:59:07 PM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
-    <class name="io.github.oleiva.entity.ext.GenreExt" table="genre" catalog="library">
+    <class name="io.github.oleiva.entity.Genre" table="genre" catalog="library">
         <id name="id" type="java.lang.Long">
             <column name="id" />
             <generator class="identity" />

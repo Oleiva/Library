@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import io.github.oleiva.beans.Pager;
-import io.github.oleiva.db.DataHelper;
+import io.github.oleiva.configs.DataHelper;
 import io.github.oleiva.entity.ext.BookExt;
 import org.primefaces.model.LazyDataModel;
 import org.primefaces.model.SortOrder;

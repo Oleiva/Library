@@ -13,11 +13,11 @@
         <!--<property name="hibernate.connection.password">root</property>-->
         <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
 
-        <mapping resource="io/github/oleiva/entity/Genre.hbm.xml"/>
-        <mapping resource="io/github/oleiva/entity/Author.hbm.xml"/>
-        <mapping resource="io/github/oleiva/entity/Book.hbm.xml"/>
-        <mapping resource="io/github/oleiva/entity/Publisher.hbm.xml"/>
-        <mapping resource="io/github/oleiva/entity/Vote.hbm.xml"/>
+        <mapping resource="entity/Genre.hbm.xml"/>
+        <mapping resource="entity/Author.hbm.xml"/>
+        <mapping resource="entity/Book.hbm.xml"/>
+        <mapping resource="entity/Publisher.hbm.xml"/>
+        <mapping resource="entity/Vote.hbm.xml"/>
 
     </session-factory>
 </hibernate-configuration>

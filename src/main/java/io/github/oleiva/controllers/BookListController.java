@@ -12,7 +12,7 @@ import org.primefaces.component.datagrid.DataGrid;
 import org.primefaces.context.RequestContext;
 import org.primefaces.model.LazyDataModel;
 import io.github.oleiva.beans.Pager;
-import io.github.oleiva.db.DataHelper;
+import io.github.oleiva.configs.DataHelper;
 import io.github.oleiva.enums.SearchType;
 import io.github.oleiva.models.BookListDataModel;
 

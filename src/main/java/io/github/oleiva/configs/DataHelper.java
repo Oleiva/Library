@@ -1,10 +1,12 @@
-package io.github.oleiva.db;
+package io.github.oleiva.configs;
 
 import java.util.HashMap;
 import java.util.List;
 
 import io.github.oleiva.entity.Book;
 import io.github.oleiva.entity.ext.BookExt;
+import io.github.oleiva.entity.Genre;
+import io.github.oleiva.entity.Publisher;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -19,10 +21,8 @@ import org.hibernate.criterion.Property;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.transform.Transformers;
 import io.github.oleiva.beans.Pager;
-import io.github.oleiva.entity.ext.AuthorExt;
-import io.github.oleiva.entity.ext.GenreExt;
+import io.github.oleiva.entity.Author;
 //import io.github.oleiva.entity.HibernateUtil;
-import io.github.oleiva.entity.ext.PublisherExt;
 import io.github.oleiva.entity.Vote;
 
 public class DataHelper {
@@ -63,20 +63,20 @@ public class DataHelper {
         return sessionFactory.getCurrentSession();
     }
 
-    public List<GenreExt> getAllGenres() {
-        return getSession().createCriteria(GenreExt.class).list();
+    public List<Genre> getAllGenres() {
+        return getSession().createCriteria(Genre.class).list();
     }
 
-    public List<PublisherExt> getAllPublishers() {
-        return getSession().createCriteria(PublisherExt.class).list();
+    public List<Publisher> getAllPublishers() {
+        return getSession().createCriteria(Publisher.class).list();
     }
 
-    public List<AuthorExt> getAllAuthors() {
-        return getSession().createCriteria(AuthorExt.class).list();
+    public List<Author> getAllAuthors() {
+        return getSession().createCriteria(Author.class).list();
     }
 
-    public GenreExt getGenre(long id) {
-        return (GenreExt) getSession().get(GenreExt.class, id);
+    public Genre getGenre(long id) {
+        return (Genre) getSession().get(Genre.class, id);
     }
 
 

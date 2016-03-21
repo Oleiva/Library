@@ -1,4 +1,14 @@
 package io.github.oleiva.entity;
+
+//import io.github.oleiva.entity.Author;
+
+//public class Author extends Author {
+//
+//
+//
+//}
+
+//package io.github.oleiva.entity;
 // Generated Jul 5, 2013 2:59:07 PM by Hibernate Tools 3.2.1.GA
 
 import java.util.Date;

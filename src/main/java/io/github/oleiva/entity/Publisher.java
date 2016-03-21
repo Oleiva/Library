@@ -1,8 +1,15 @@
 package io.github.oleiva.entity;
-// Generated Jul 5, 2013 2:59:07 PM by Hibernate Tools 3.2.1.GA
 
 import java.util.HashSet;
 import java.util.Set;
+
+//public class Publisher extends Publisher {
+//
+//}
+
+//package io.github.oleiva.entity;
+// Generated Jul 5, 2013 2:59:07 PM by Hibernate Tools 3.2.1.GA
+
 
 /**
  * Publisher generated b
@@ -49,3 +56,4 @@ public class Publisher implements java.io.Serializable {
         this.books = books;
     }
 }
+

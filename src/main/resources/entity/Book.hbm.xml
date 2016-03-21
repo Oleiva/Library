@@ -7,13 +7,13 @@
       <column name="id"/>
       <generator class="identity"/>
     </id>
-    <many-to-one class="io.github.oleiva.entity.ext.AuthorExt" fetch="join" name="author" lazy="false">
+    <many-to-one class="io.github.oleiva.entity.Author" fetch="join" name="author" lazy="false">
       <column name="author_id" not-null="true"/>
     </many-to-one>
-    <many-to-one class="io.github.oleiva.entity.ext.GenreExt" fetch="join" name="genre" lazy="false">
+    <many-to-one class="io.github.oleiva.entity.Genre" fetch="join" name="genre" lazy="false">
       <column name="genre_id" not-null="true"/>
     </many-to-one>
-    <many-to-one class="io.github.oleiva.entity.ext.PublisherExt" fetch="join" name="publisher" lazy="false">
+    <many-to-one class="io.github.oleiva.entity.Publisher" fetch="join" name="publisher" lazy="false">
       <column name="publisher_id" not-null="true"/>
     </many-to-one>
     <property name="name" type="string">
